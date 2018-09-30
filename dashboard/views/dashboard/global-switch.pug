@@ -1,0 +1,23 @@
+extends ../base/_layout
+block config
+  - var page = "global-switch";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.fa.fa-object-group
+            span.caption-subject.bold.font-grey-gallery.uppercase  Global Switch
+          .tools
+            a.collapse(href='', data-original-title='', title='')
+        .portlet-body
+          .row
+            .col-sm-12
+              form.global-switch(method="post")
+                button.global-switch-btn(type="button" class= globalSwitchValue === 'on'? 'active': '')
+                  if globalSwitchValue === 'off'
+                    | Turn ON The Bot
+                  else
+                    | Turn OFF The Bot

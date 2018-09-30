@@ -1,0 +1,84 @@
+extends ../base/_layout
+block config
+  - var page = "users";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            span.caption-subject.bold.font-grey-gallery.uppercase  Users
+          .tools
+            a.collapse(href='', data-toggle='collapse' data-target='#filterSection', title='')
+        .filter-section.collapse#filterSection
+          label.usersFilter(for='nationalId') National Id
+          input.form-control.nationalIdFilter(id='nationalId' type='number')
+          label.usersFilter(for='phone') Phone no
+          input.form-control.nationalIdFilter(id='phone' type='number')
+          label.usersFilter(for='gender') Gender
+          select.form-control.nationalIdFilter(id='gender')
+            option Male
+            option Female
+          .col-md-4.dateRangeSection
+            label(for="msg-daterange" class="control-label") Select Date Range
+            .input-group.date#msg-daterange
+              input.form-control(type="text")
+              span.input-group-addon
+                span.i.fa.fa-calendar
+        .portlet-body
+        .table-scrollable
+          .brand
+            table.table.table-striped.table-hover.usersTable.center
+              thead
+                tr
+                  th Avatar
+                  th First Name
+                  th Last Name
+                  th Gender
+                  th Phone
+                  th National Id
+                  th Last Interaction
+                  th Status
+                  th Actions
+              tbody
+                each userDetails in usersDetails
+                  tr
+                    td
+                      .convo__img-wrapper
+                        img(src='/images/dumm.jpg')
+                    td
+                      span= userDetails.firstName
+                    td
+                      span= userDetails.lastName
+                    td
+                      span= userDetails.gender
+                    td
+                      span= userDetails.phone
+                    td
+                      span= userDetails.nationalId
+                    td
+                      span= userDetails.formattedTime
+                    td
+                      if !userDetails.isWarned
+                        span.label.label-warning.statusLabel.support Support is needed
+                      if !userDetails.isNew
+                        span.label.label-success.statusLabel.enabled Enabled
+                    td
+                      //- a.viewUserConvs(href='#')
+                      //-   i(class='fa fa-commenting-o', aria-hidden='true', data-timestamp= userDetails.formmatedTime, data-user-name= userDetails.firstName + ' ' + userDetails.lastName, data-user-id= userDetails.fbId, title= userDetails.firstName + ' conversations')
+                      a.btn.blue.btn-xs(href="#") Edit
+                      a.btn.red.btn-xs(href="#") Remove
+                tfoot
+                  tr
+                    td(colspan="4")
+                      nav.text-center
+                        ul.pagination
+                          li: a(href="#") &laquo;
+                          li.active: a(href="#") 1
+                          li: a(href="#") 2
+                          li: a(href="#") 3
+                          li: a(href="#") 4
+                          li: a(href="#") 5
+                          li: a(href="#") &raquo;
+        .userConversation

@@ -1,0 +1,180 @@
+[
+  {
+    "name": "Mobiles",
+    "magentoId": 49,
+    "main_feature_text": "RAM",
+    "main_feature": "gfk_ram_in_mb_60526",
+    "unit": "gigabyte"
+  },
+  {
+    "name": "TV & Home Theater",
+    "magentoId": 45,
+    "main_feature_text": "Size In Inch",
+    "main_feature": [
+      "lcd_monitor_size_in_inch",
+      "gfk_display_size_in_inch_82970"
+    ],
+    "unit": "inch"
+  },
+  {
+    "name": "Dishwashers",
+    "magentoId": 13,
+    "main_feature_text": "Number of places",
+    "main_feature": "gfk_number_of_place_sett_70611",
+    "unit": "place"
+  },
+  {
+    "name": "Washing Machines",
+    "magentoId": 14,
+    "main_feature_text": "Load Weight",
+    "main_feature": "gfk_maximum_loading_capa_10240",
+    "unit": "kilo"
+  },
+  {
+    "name": "Refrigerators",
+    "magentoId": 15,
+    "main_feature_text": "Feet",
+    "main_feature": "filters_refrigerator"
+  },
+  {
+    "name": "Cooker",
+    "magentoId": 18,
+    "main_feature_text": "Number Of Flames",
+    "main_feature": "gfk_number_of_cooking_zo_90965",
+    "unit": "flame"
+  },
+  {
+    "name": "Microwaves",
+    "magentoId": 19,
+    "main_feature_text": "Total Capacity",
+    "main_feature": "gfk_net_capacity_total_d_57682",
+    "unit": "litre"
+  },
+  {
+    "name": "Laptops",
+    "magentoId": 78,
+    "main_feature_text": "Processor Cores",
+    "main_feature": "gfk_processor_cores_12281"
+  },
+  {
+    "name": "Air Conditioning",
+    "magentoId": 8,
+    "main_feature_text": "Horse Power",
+    "main_feature": "horse_power",
+    "unit": "horse_power"
+  },
+  {
+    "name": "Deep Freezers",
+    "magentoId": 16,
+    "main_feature_text": "Number Of Draws",
+    "main_feature": "draws",
+    "unit": "draws"
+  },
+  {
+    "name": "Kitchen Machines",
+    "magentoId": 147,
+    "children_data": [
+      {
+        "name": "Kettles",
+        "magentoId": 23,
+        "main_feature": [
+          "gfk_maximum_wattage_82526"
+        ],
+        "unit": "watt"
+      },
+      {
+        "name": "Sandwich- / Waffle Makers / Grills",
+        "magentoId": 27,
+        "main_feature": [
+          "gfk_maximum_wattage_90217"
+        ],
+        "unit": "watt"
+      },
+      {
+        "name": "Irons",
+        "magentoId": 34,
+        "main_feature": [
+          "gfk_maximum_wattage_66751"
+        ],
+        "unit": "watt"
+      },
+      {
+        "name": "Food Preparation",
+        "magentoId": 145,
+        "main_feature": [
+          "gfk_maximum_wattage_98571"
+        ],
+        "unit": "watt"
+      },
+      {
+        "name": "Juice Extractors/Citrus Presses",
+        "magentoId": 39,
+        "main_feature": [
+          "gfk_maximum_wattage_82526"
+        ],
+        "unit": "watt"
+      },
+      {
+        "name": "Vacuum Cleaners",
+        "magentoId": 42,
+        "main_feature": [
+          "gfk_maximum_wattage_49531"
+        ],
+        "unit": "watt"
+      },
+      {
+        "name": "Water Filters",
+        "magentoId": 64,
+        "product_count": 3
+      },
+      {
+        "name": "Electric Fans",
+        "magentoId": 44,
+        "main_feature": [
+          "gfk_maximum_wattage_98571"
+        ],
+        "unit": "watt"
+      },
+      {
+        "name": "Coffee Machines",
+        "magentoId": 24,
+        "main_feature": [
+          "gfk_maximum_wattage_82526"
+        ],
+        "unit": "watt"
+      }
+    ]
+  },
+  {
+    "name": "Personal Care",
+    "magentoId": 30,
+    "children_data": [
+      {
+        "name": "Shaving / Trimming",
+        "magentoId": 31,
+        "product_count": 49
+      },
+      {
+        "name": "Hair Dryers",
+        "magentoId": 32,
+        "main_feature": [
+          "gfk_maximum_wattage_98571"
+        ],
+        "unit": "watt"
+      },
+      {
+        "name": "Hair Stylers",
+        "magentoId": 33,
+        "main_feature": [
+          "gfk_maximum_wattage_98571"
+        ],
+        "unit": "watt"
+      }
+    ]
+  },
+  {
+    "magentoId": 103,
+    "name": "Daily Deals",
+    "product_count": 251
+  }
+]

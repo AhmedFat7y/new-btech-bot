@@ -1,0 +1,29 @@
+extends ../base/_layout
+block config
+  - var page = "conversations";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.icon-wrench.font-grey-gallery
+            span.caption-subject.bold.font-grey-gallery.uppercase  Failed Conversations
+          .tools
+            a.collapse(href='', data-original-title='', title='')
+        .portlet-body
+          section.grid
+            .column.column--3
+              .convos-list-wrapper
+                ul.convos-list
+                  each convo in convos
+                    li.convo-wrapper
+                      a.convo(href='#', data-user-id=convo.fbId)
+                        .convo__img-wrapper: img(src=convo.profilePhoto || '')
+                        .convo__content-wrapper
+                          span.convo__username= convo.firstName ? convo.firstName + ' ' + (convo.lastName || '') : convo.fbId
+                          span.convo__last-msg= convo.latestMessage.text
+            .column.column--7
+              .convo-details.empty
+                p Pick a user to display his messages

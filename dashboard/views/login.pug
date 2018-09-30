@@ -1,0 +1,22 @@
+extends base/_layout
+block config
+  - var page = "login";
+block content
+  .row
+    .col-sm-4
+      .portlet.light
+        .portlet-body.form
+          form(role='form', method="post")
+            .form-body
+              if errors
+                ul.error
+                  each error in errors
+                    li= error.msg
+              .form-group.form-md-line-input
+                input#username.form-control(type='text', name="username", placeholder='Username' value=username)
+                label(for='username') Username
+              .form-group.form-md-line-input
+                input#password.form-control(type='password', name="password", placeholder='Password', value=password)
+                label(for='password') Password
+            .form-actions.noborder
+              button.btn.blue(type='submit') Login

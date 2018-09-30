@@ -1,0 +1,16 @@
+extends ../base/_layout
+block config
+  - var page = "index";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.icon-wrench.font-grey-gallery
+            span.caption-subject.bold.font-grey-gallery.uppercase  Btech's Chatbot Dashboard
+          .tools
+            a.collapse(href='', data-original-title='', title='')
+        .portlet-body
+          h3 Explore the available services from the left sidebar

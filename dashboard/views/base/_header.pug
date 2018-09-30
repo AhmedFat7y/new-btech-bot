@@ -1,0 +1,35 @@
+// BEGIN HEADER
+.page-header.navbar.navbar-fixed-top
+  // BEGIN HEADER INNER
+  .page-header-inner
+    // BEGIN LOGO
+    .page-logo
+      a(href='/dashboard/')
+        img.logo-default(src='/images/bibo.png', alt='logo')
+      .menu-toggler.sidebar-toggler
+        // DOC: Remove the above "hide" to enable the sidebar toggler button on header
+    // END LOGO
+    // BEGIN RESPONSIVE MENU TOGGLER
+    a.menu-toggler.responsive-toggler(href='javascript:;', data-toggle='collapse', data-target='.navbar-collapse')
+    // END RESPONSIVE MENU TOGGLER
+    // BEGIN PAGE TOP
+    .page-top
+      if ! ['login', 'groups'].includes(page)
+        .col-sm-6.global-daterange.vertical-center
+          .row
+            .col-sm-4
+              label.control-label.data-range(for="report-daterange") Select Date Range
+            .col-sm-8
+              .input-group.date#report-daterange
+                input.date(type="text" class="form-control" name="daterange")
+                span.input-group-addon
+                  span.i.fa.fa-calendar
+      if ! ['summary', 'login'].includes(page)
+        .col-sm-2.vertical-center
+          a.btn.btn-primary(href="./export/") Export To CSV
+      // BEGIN TOP NAVIGATION MENU
+          // END USER LOGIN DROPDOWN
+      // END TOP NAVIGATION MENU
+    // END PAGE TOP
+  // END HEADER INNER
+// END HEADER

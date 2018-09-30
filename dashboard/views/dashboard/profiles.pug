@@ -1,0 +1,123 @@
+extends ../base/_layout
+block config
+  - var page = "profiles";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-3
+      a.profiles-tab(href='/dashboard/profiles/')
+        .profile.dashboard-stat.dashboard-stat-v2.blue
+          .visual
+            i.fa.fa-group
+          .details
+            .number
+              span Profiles
+    .col-sm-3
+      a.groups-tab(href='/dashboard/groups/')
+        .dashboard-stat.dashboard-stat-v2.red-pink
+          .visual
+            i.fa.fa-object-group
+          .details
+            .number
+              span Groups
+    .col-sm-3(id="create-group-col")
+      button.btn.blue.btn-xs.show-group-form Create Group
+
+    .col-sm-3(id='make-group')
+      form(method='post',id="group-info" action="/dashboard/groups/")
+        p
+          input(id='group-name-input',placeholder='group name',name="groupName",type='text',required)
+          input(name="filters",type='hidden')
+        button.btn.blue.btn-xs.create-group(type='button') Make Group
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.fa.fa-group
+            span.caption-subject.bold.font-grey-gallery.uppercase  Profiles
+          .tools
+            a.collapse(href='', data-toggle='collapse' data-target='#filterSection', title='')
+        .row
+          .filter-section#filterSection
+            form(id="form1")
+              .col-md-3
+                label.usersFilter(for='gender') Gender
+                select.form-control.genderFilter(id='gender')
+                  option(selected disabled) Select gender
+                  option(value='male') male
+                  option(value='female') female
+              .col-md-3
+                label.usersFilter(for='inserests') Interests
+                select.form-control.InterestsFilter(id='interests')
+                  option(selected disabled) Select interest
+                  each category, index in categories
+                    if category.name
+                      option(value=category.magentoId)= category.name
+              .col-md-3
+                label.usersFilter(for='group-name') Group Name
+                select.form-control.gtoupNameFilter(id='group-name')
+                  option(selected disabled) Select group
+                  each group, index in groups
+                    if group.name
+                      option(value=group.name)= group.name
+              .col-md-3.submit-filters
+                button.btn.blue.btn-xs(type='submit' class='filtersSubmit') Apply Filter
+                button.btn.blue.btn-xs.reset-filters(type='reset' class='filtersSubmit') Reset Filter
+              //- .col-md-6.dateRangeSection
+              //-   label(for="msg-daterange" class="control-label") Select Date Range
+              //-   .input-group.date#msg-daterange
+              //-     input.form-control(type="text")
+              //-     span.input-group-addon
+              //-       span.i.fa.fa-calendar
+        .portlet-body
+        .table-scrollable
+          .brand
+            table.table.table-striped.table-hover.usersTable.center
+              thead
+                tr
+                  th Avatar
+                  th Full Name
+                  th Gender
+                  th Phone
+                  th National Id
+                  th Last Interaction
+                  th Status
+                  th Actions
+              tbody
+              for user in usersDetails
+                  tr
+                    td
+                      a.convo__img-wrapper(href='/dashboard/profiles/' + user.fbId + '/view/')
+                        img(src=user.profilePhoto===undefined? '/images/dumm.jpg': user.profilePhoto)
+                    td
+                      a(href='/dashboard/profiles/' + user.fbId + '/view/')= (user.firstName || '') + ' ' + (user.lastName || '')
+                    td
+                      span= user.gender
+                    td
+                      if user.collectedData.phone === undefined
+                        span not provided
+                      else
+                        span= user.collectedData.phone
+                    td
+                      if user.collectedData.nationalId === undefined
+                        span not provided
+                      else
+                        span= user.collectedData.nationalId
+                    td
+                      if ! user.latestInteraction
+                        span No last interaction
+                      else
+                        span= user.formattedLatestInteraction
+
+                    td
+                      if user.needsSupport
+                        span.label.label-warning.statusLabel.support Support is needed
+                    td
+                      a.btn.blue.btn-xs(href="#") Edit
+                      a.btn.red.btn-xs(href="#") Remove
+              tfoot
+                tr
+                  td(colspan="12")
+                    nav.text-center
+                      div(id="pagination",class="pagination-sm")

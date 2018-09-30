@@ -1,0 +1,55 @@
+extends ../base/_layout
+block config
+  - var page = "profile";
+block content
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-body
+          .row.user-info
+            .col-sm-3
+              .profile-image
+                img(src=userDetails.profilePhoto)
+            .col-sm-3
+              ul
+                li
+                  span.title Name: 
+                  span.content= userDetails.firstName+" "+userDetails.lastName
+                li
+                  span.title Gender: 
+                  span.content= userDetails.gender
+                li
+                  span.title Phone: 
+                  span.content= userDetails.collectedData.phone
+                li
+                  span.title NationalId: 
+                  span.content= userDetails.collectedData.nationalId
+            .col-sm-4
+              ul
+                li
+                  span.title Last Interaction Time: 
+                  span.content= latestMessage[0]._id.day + "/" + latestMessage[0]._id.month + "/" + latestMessage[0]._id.hour +" "+ latestMessage[0]._id.hour +":"+latestMessage[0]._id.minute    
+                li
+                  span.title Number Of Messages: 
+                  span.content= messageCount[0].count
+                li
+                  span.title Needs Support: 
+                  span.content= !!flag
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.icon-wrench.font-grey-gallery
+            span.caption-subject.bold.font-grey-gallery.uppercase  Conversation
+          .tools
+            a.collapse(href='', data-original-title='', title='')
+        .portlet-body
+          section.grid
+            .convo-details(data-user-id= userDetails.fbId)
+              each message in messages
+                .message.message--from(class= message.isFailure? 'error': '')
+                  span= message.text || (message.extraData && message.extraData.text) || 'Buttons/Carousal'
+                each reply in message.replies
+                  .message.message--to(class= message.isFailure? 'error': '')
+                    span= reply.text || 'Buttons/Carousal'

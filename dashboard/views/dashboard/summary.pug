@@ -1,0 +1,123 @@
+extends ../base/_layout
+block config
+  - var page = "summary";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-3
+      .dashboard-stat.dashboard-stat-v2.blue
+        .visual
+          i.fa.fa-male
+        .details
+          .number
+            span(data-counter='counterup', data-value=males)= males
+          .desc Males
+        //a.more(href='javascript:;')
+          | View more
+          i.m-icon-swapright.m-icon-white
+    .col-sm-3
+      .dashboard-stat.dashboard-stat-v2.red-pink
+        .visual
+          i.fa.fa-female
+        .details
+          .number
+            span(data-counter='counterup', data-value=females)= females
+          .desc Females
+        //a.more(href='javascript:;')
+          | View more
+          i.m-icon-swapright.m-icon-white
+    .col-sm-3
+      .dashboard-stat.dashboard-stat-v2.blue
+        .visual
+          i.fa.fa-comments
+        .details
+          .number
+            span(data-counter='counterup', data-value=maintenanceRequestN)= maintenanceRequestN
+          .desc  Open Maintenance Requests
+        //a.more(href='javascript:;')
+          | View more
+          i.m-icon-swapright.m-icon-white
+    .col-sm-3
+      .dashboard-stat.dashboard-stat-v2.blue
+        .visual
+          i.fa.fa-comments
+        .details
+          .number
+            span(data-counter='counterup', data-value=noOfSupportNeeded)= noOfSupportNeeded
+          .desc Open Cases
+        //a.more(href='javascript:;')
+          | View more
+          i.m-icon-swapright.m-icon-white
+  .row
+    .col-sm-6
+      .portlet.light.bordered
+        .portlet-body
+          .mt-element-list
+            .mt-list-head.list-simple.font-white.bg-blue
+              .list-head-title-container
+                h3.list-title Top 10 Interest
+            .mt-list-container.list-simple
+              ul
+                each interest in top10Interests
+                  li.mt-list-item
+                    .list-icon-container
+                    .list-item-content= interest._id
+    .col-sm-6
+      .portlet.light.bordered
+        .portlet-body
+          .mt-element-list
+            .mt-list-head.list-simple.font-white.bg-blue
+              .list-head-title-container
+                h3.list-title Top 10 Profiles
+            .mt-list-container.list-simple
+              ul
+                each profile in profilesName
+                  li.mt-list-item
+                    .list-icon-container.done
+                    .list-item-content
+                      a.names(href="/dashboard/profiles/" + profile.fbId + '/view/')= (profile.firstName || '') + " " + (profile.lastName || '')
+  .row
+    .col-sm-12
+      .portlet.light.bordered
+        .portlet-body
+          .table-scrollable
+            .brand
+              table.table.table-striped.table-hover.usersTable
+                thead
+                  tr
+                    th Date
+                    th Users
+                    th 8:00 - 12:00
+                    th 12:00 - 16:00
+                    th 16:00 - 20:00
+                    th 20:00 - 00:00
+                    th 00:00 - 4:00
+                    th 4:00 - 8:00
+                tbody
+                  each row in timeline
+                    tr
+                      td= row._id.year + "-" + row._id.month + "-" + row._id.day
+                      td= row.userCount
+                      td= row.time1Count
+                      td= row.time2Count
+                      td= row.time3Count
+                      td= row.time4Count
+                      td= row.time5Count
+                      td= row.time6Count
+//-
+//-   .row
+//-     .col-sm-12
+//-       .col-sm-2
+//-         div.topinterests
+//-           |Top 10 Interests
+//-           ol
+//-             each interest in top10Interests
+//-               li=interest._id
+//-       .col-sm-3
+//-         div.topprofiles
+//-           |Top 10 Profiles
+//-           ol
+//-             each profile in profilesName
+//-               li
+//-                 a.names(href="/dashboard/profile/" + profile.fbId)= profile.firstName + " " + profile.lastName
+//- >>>>>>> single page complelete

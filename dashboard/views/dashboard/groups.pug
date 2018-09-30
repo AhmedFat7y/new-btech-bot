@@ -1,0 +1,48 @@
+extends ../base/_layout
+block config
+  - var page = "groups";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-3
+      a.profiles-tab(href='/dashboard/profiles/')
+        .dashboard-stat.dashboard-stat-v2.blue
+          .visual
+            i.fa.fa-group
+          .details
+            .number
+              span Profiles
+
+    .col-sm-3
+      a.groups-tab(href='/dashboard/groups/')
+        .group.dashboard-stat.dashboard-stat-v2.red-pink
+          .visual
+            i.fa.fa-object-group
+          .details
+            .number
+              span Groups
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.fa.fa-object-group
+            span.caption-subject.bold.font-grey-gallery.uppercase  Groups
+          .tools
+            a.collapse(href='', data-original-title='', title='')
+        .portlet-body
+          .row
+            .col-sm-12
+              .table-scrollable
+                table.table.table-striped.table-hover
+                  thead
+                    tr
+                      th Group Name
+                      th Users Count
+                      th Grouped by
+                  tbody
+                    each group in groupsList
+                      tr
+                        td= group.name
+                        td= group.usersCount
+                        td: pre= JSON.stringify(group.displayedFilters, null, 2)

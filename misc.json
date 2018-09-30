@@ -1,0 +1,514 @@
+{
+  "13": {
+    "name": "Dishwashers",
+    "magentoId": 13,
+    "product_count": 68,
+    "main_feature_text": "Number of places",
+    "main_feature": "gfk_number_of_place_sett_70611",
+    "options": [
+      {
+        "label": "15 Places",
+        "value": 15
+      },
+      {
+        "label": "14 Places",
+        "value": 14
+      },
+      {
+        "label": "13 Places",
+        "value": 13
+      },
+      {
+        "label": "12 Places",
+        "value": 12
+      },
+      {
+        "label": "10 Places",
+        "value": 10
+      },
+      {
+        "label": "8 Places",
+        "value": 8
+      },
+      {
+        "label": "6 Places",
+        "value": 6
+      }
+    ]
+  },
+  "14": {
+    "name": "Washing Machines",
+    "magentoId": 14,
+    "product_count": 163,
+    "main_feature_text": "Load Weight",
+    "main_feature": "gfk_maximum_loading_capa_10240",
+    "options": [
+      {
+        "label": "21 KG",
+        "value": 21
+      },
+      {
+        "label": "20 KG",
+        "value": 20
+      },
+      {
+        "label": "17 KG",
+        "value": 17
+      },
+      {
+        "label": "16 KG",
+        "value": 16
+      },
+      {
+        "label": "15 KG",
+        "value": 15
+      },
+      {
+        "label": "14 KG",
+        "value": 14
+      },
+      {
+        "label": "13 KG",
+        "value": 13
+      },
+      {
+        "label": "12 KG",
+        "value": 12
+      },
+      {
+        "label": "11 KG",
+        "value": 11
+      },
+      {
+        "label": "10 KG",
+        "value": 10
+      },
+      {
+        "label": "9 KG",
+        "value": 9
+      },
+      {
+        "label": "8 KG",
+        "value": 8
+      },
+      {
+        "label": "7 KG",
+        "value": 7
+      },
+      {
+        "label": "6 KG",
+        "value": 6
+      },
+      {
+        "label": "5 KG",
+        "value": 5
+      },
+      {
+        "label": "4 KG",
+        "value": 4
+      },
+      {
+        "label": "3 KG",
+        "value": 3
+      }
+    ]
+  },
+  "15": {
+    "name": "Refrigerators",
+    "magentoId": 15,
+    "product_count": 140,
+    "main_feature_text": "Feet",
+    "main_feature": "filters_refrigerator",
+    "options": [
+      {
+        "label": "8-12 FT",
+        "value": 1136
+      },
+      {
+        "label": "13-16 FT",
+        "value": 1137
+      },
+      {
+        "label": "16-20 FT",
+        "value": 1650
+      },
+      {
+        "label": "20-24 FT",
+        "value": 1139
+      },
+      {
+        "label": "26-30 FT",
+        "value": 1140
+      },
+      {
+        "label": "30+ FT",
+        "value": 1141
+      },
+      {
+        "label": "3-7 FT",
+        "value": 1653
+      }
+    ]
+  },
+  "18": {
+    "name": "Cooker",
+    "magentoId": 18,
+    "product_count": 142,
+    "main_feature_text": "Number Of Flames",
+    "main_feature": "gfk_number_of_cooking_zo_90965",
+    "options": [
+      {
+        "label": "6 Flames",
+        "value": 1136
+      },
+      {
+        "label": "5 Flames",
+        "value": 1136
+      },
+      {
+        "label": "4 Flames",
+        "value": 1136
+      },
+      {
+        "label": "2 Flames",
+        "value": 1136
+      }
+    ]
+  },
+  "19": {
+    "name": "Microwaves",
+    "magentoId": 19,
+    "product_count": 18,
+    "main_feature_text": "Total Capacity",
+    "main_feature": "gfk_net_capacity_total_d_57682",
+    "options": [
+      {
+        "label": "61 litre",
+        "value": 61
+      },
+      {
+        "label": "50 Litre",
+        "value": 50
+      },
+      {
+        "label": "42 Litre",
+        "value": 42
+      },
+      {
+        "label": "40 Litre",
+        "value": 40
+      },
+      {
+        "label": "34 Litre",
+        "value": 34
+      },
+      {
+        "label": "31 Litre",
+        "value": 31
+      },
+      {
+        "label": "30 Litre",
+        "value": 30
+      },
+      {
+        "label": "26 Litre",
+        "value": 26
+      },
+      {
+        "label": "24 Litre",
+        "value": 24
+      },
+      {
+        "label": "23 Litre",
+        "value": 23
+      },
+      {
+        "label": "20 Litre",
+        "value": 20
+      }
+    ]
+  },
+  "23": {
+    "name": "Kettles",
+    "magentoId": 23,
+    "product_count": 13,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "24": {
+    "name": "Coffee Machines",
+    "magentoId": 24,
+    "product_count": 16,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "27": {
+    "name": "Sandwich- / Waffle Makers / Grills",
+    "magentoId": 27,
+    "product_count": 8,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "31": {
+    "name": "Shaving / Trimming",
+    "magentoId": 31,
+    "product_count": 49,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "32": {
+    "name": "Hair Dryers",
+    "magentoId": 32,
+    "product_count": 26,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "33": {
+    "name": "Hair Stylers",
+    "magentoId": 33,
+    "product_count": 50,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "35": {
+    "name": "Irons",
+    "magentoId": 35,
+    "product_count": 16,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "38": {
+    "name": "Food Preparation",
+    "magentoId": 38,
+    "product_count": 83,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "39": {
+    "name": "Juice Extractors/Citrus Presses",
+    "magentoId": 39,
+    "product_count": 15,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "42": {
+    "name": "Vacuum Cleaners",
+    "magentoId": 42,
+    "product_count": 29,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "44": {
+    "name": "Electric Fans",
+    "magentoId": 44,
+    "product_count": 40,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "45": {
+    "name": "TV & Home Theater",
+    "magentoId": 45,
+    "product_count": 198,
+    "main_feature_text": "Size In Inch",
+    "main_feature": [
+      "lcd_monitor_size_in_inch",
+      "gfk_display_size_in_inch_82970"
+    ],
+    "options": [
+      {
+        "label": "58 - 65 Inch",
+        "value": [
+          58,
+          65
+        ]
+      },
+      {
+        "label": "48 - 55 Inch",
+        "value": [
+          48,
+          55
+        ]
+      },
+      {
+        "label": "40 - 43 Inch",
+        "value": [
+          40,
+          43
+        ]
+      },
+      {
+        "label": "22 - 39 Inch",
+        "value": [
+          22,
+          39
+        ]
+      }
+    ]
+  },
+  "48": {
+    "name": "Mobiles",
+    "magentoId": 48,
+    "product_count": 164,
+    "main_feature_text": "RAM",
+    "main_feature": "gfk_ram_in_mb_60526",
+    "options": [
+      {
+        "label": "4 GB RAM",
+        "value": 4096
+      },
+      {
+        "label": "3 GB RAM",
+        "value": 3072
+      },
+      {
+        "label": "2 GB RAM",
+        "value": 2048
+      },
+      {
+        "label": "1.5 GB RAM",
+        "value": 1536
+      },
+      {
+        "label": "1 GB RAM",
+        "value": 1024
+      },
+      {
+        "label": "0.5 GB RAM",
+        "value": 512
+      }
+    ]
+  },
+  "64": {
+    "name": "Water Filters",
+    "magentoId": 64,
+    "product_count": 3,
+    "main_feature": [
+      "gfk_maximum_wattage_40665",
+      "gfk_maximum_wattage_90217",
+      "gfk_maximum_wattage_98571",
+      "gfk_maximum_wattage_66751",
+      "gfk_maximum_wattage_49531",
+      "gfk_maximum_wattage_96196",
+      "gfk_maximum_wattage_96585",
+      "gfk_maximum_wattage_82526"
+    ]
+  },
+  "78": {
+    "name": "Laptops",
+    "magentoId": 78,
+    "product_count": 53,
+    "main_feature_text": "Processor Cores",
+    "main_feature": "gfk_processor_cores_12281",
+    "options": [
+      {
+        "label": "Dual-Core",
+        "value": 403
+      },
+      {
+        "label": "Octa-Core",
+        "value": 1240
+      },
+      {
+        "label": "Quad-Core",
+        "value": 405
+      },
+      {
+        "label": "Single-Core",
+        "value": 404
+      }
+    ]
+  },
+  "95": {
+    "magentoId": 95,
+    "name": "Daily Deals",
+    "product_count": 251
+  }
+}

@@ -1,0 +1,62 @@
+extends ../base/_layout
+block config
+  - var page = "complaints";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.icon-wrench.font-grey-gallery
+            span.caption-subject.bold.font-grey-gallery.uppercase  Complaints
+          .tools
+            a.collapse(href='', data-original-title='', title='')
+        .portlet-body
+          //.row
+            .col-sm-6
+              label.control-label(for="report-daterange") Select Date Range
+                .input-group.date#report-daterange
+                 input(type="text" class="form-control")
+                 span.input-group-addon
+                   span.i.fa.fa-calendar
+            .col-sm-6
+              label.control-label Search Table
+                .input-group(id='in')
+                  input.form-control(type='search', value='', placeholder='Search ')
+                  .input-group-btn
+                       button.btn.btn-primary(type='submit')
+                         span.glyphicon.glyphicon-search
+          .row
+            .col-sm-12
+              .table-scrollable
+                table.table.table-striped.table-hover
+                  thead
+                    tr
+                      th Complaint Time
+                      th  Name
+                      th Phone
+                      th Complaint
+                      th Status
+                      th Actions
+                  tbody
+                    each complaint in complaints
+                      tr
+                        td= complaint.formattedTime
+                        td= complaint.name
+                        td= complaint.phone
+                        td(colspan="2")
+                          each singleComplaint in complaint.text
+                            p=singleComplaint
+              
+                        td
+                          span.label(class=complaint.isHandled? 'label-success .status.Label.enabled': 'label-warning .statusLabel.support')= complaint.status
+
+                        td
+                          a.btn.blue.btn-xs(href="#")  Handle
+                          a.btn.red.btn-xs(href="#")  Delete
+                  tfoot
+                    tr
+                      td(colspan="12")
+                        nav.text-center
+                          div(id="pagination",class="pagination-sm")

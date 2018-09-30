@@ -1,0 +1,34 @@
+extends ../base/_layout
+block config
+  - var page = "installation-requests";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.icon-wrench.font-grey-gallery
+            span.caption-subject.bold.font-grey-gallery.uppercase  Installation Requests
+          .tools
+            a.collapse(href='', data-original-title='', title='')
+        .portlet-body
+          section.grid
+            .column.column--6
+              .requests-list-wrapper
+                ul.requests-list
+                  each request in requests
+                    li.request
+                      .request__content-wrapper
+                        p.request__username
+                          span Name:
+                          = request.name
+                        p.request__last-msg
+                          span Phone:
+                          = request.phone
+                        p.request__last-msg
+                          span Address:
+                          = request.address
+            //.column.column--7
+            //  .request-details.empty
+            //    p Pick a user to display his messages

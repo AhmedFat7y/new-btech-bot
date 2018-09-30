@@ -1,0 +1,22 @@
+extends ../base/_layout
+block config
+  - var page = "interests";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-8.col-sm-offset-2
+      .portlet.light.bordered
+        .portlet-body
+          .table-scrollable
+            table.table.table-striped.table-hover.usersTable.center
+                thead.font-white.bg-blue
+                  tr
+                    th Interests
+                    th Users Count
+                    th Interests Count
+                tbody
+                  each interest in interestsUserCount
+                    tr
+                      td=interest._id
+                      td= interest.userCount
+                      td= interest.count

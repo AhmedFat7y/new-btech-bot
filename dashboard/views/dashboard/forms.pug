@@ -1,0 +1,32 @@
+extends ../base/_layout
+block config
+  - var page = "forms";
+block content
+  // BEGIN PAGE HEADER
+  .row
+    .col-sm-12
+      .portlet.light
+        .portlet-title
+          .caption
+            i.fa.fa-object-group
+            span.caption-subject.bold.font-grey-gallery.uppercase  Form Submissions Stats
+          .tools
+            a.collapse(href='', data-original-title='', title='')
+        .portlet-body
+          .row
+            .col-sm-12
+              .table-scrollable
+                table.table.table-striped.table-hover
+                  thead
+                    tr
+                      th Title
+                      th Submissions Count
+                      th First Submission Date
+                      th Last Submission Date
+                  tbody
+                    each form in formsList
+                      tr
+                        td= form.title
+                        td= form.submissionsCount
+                        td= form.firstFormattedTimestamp
+                        td= form.lastFormattedTimestamp

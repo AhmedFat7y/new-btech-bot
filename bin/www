@@ -1,0 +1,124 @@
+#!/usr/bin/env node
+/**
+ * Module dependencies.
+ */
+require('dotenv').config();
+let config = require('../config');
+if (config.AZURE.APPLICATION_INSIGHTS_KEY) {
+  console.log('Application Inishts is Working');
+  const appInsights = require("applicationinsights");
+  appInsights.setup(config.AZURE.APPLICATION_INSIGHTS_KEY)
+    .setAutoDependencyCorrelation(true)
+    .setAutoCollectRequests(true)
+    .setAutoCollectPerformance(true)
+    .setAutoCollectExceptions(true)
+    .setAutoCollectDependencies(true)
+    .setAutoCollectConsole(true)
+    .setUseDiskRetryCaching(true)
+    .start();
+}
+let fs = require('fs');
+let app = require('../app');
+let debug = require('debug')('btech-bot:server');
+let http = require('http');
+let https = require('https');
+/**
+ * Get port from environment and store in Express.
+ */
+
+let httpPort = normalizePort(process.env.BOT_BTECH_HTTP_PORT || '3000');
+let httpsPort = normalizePort(process.env.BOT_BTECH_HTTPS_PORT || '3001');
+console.log ('PORTS:', httpPort, httpsPort);
+app.set('port', httpPort);
+
+/**
+ * Create HTTP server.
+ */
+let isSSL = false;
+let options = {};
+
+if (config.SSL.CA_PATH) {
+  options = {
+    key: fs.readFileSync(config.SSL.KEY_PATH).toString(),
+    cert: fs.readFileSync(config.SSL.CERT_PATH).toString(),
+    ca: fs.readFileSync(config.SSL.CA_PATH).toString()
+  }
+  isSSL = true;
+}
+
+let server = https.createServer(options, app);
+let secondaryServer = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+secondaryServer.listen(httpPort);
+secondaryServer.on('error', onError.bind(secondaryServer, httpPort));
+secondaryServer.on('listening', onListening.bind(secondaryServer, httpPort));
+
+server.listen(httpsPort);
+server.on('error', onError.bind(server, httpsPort));
+server.on('listening', onListening.bind(server, httpsPort));
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  let port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(port, error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+  let addr = this.address();
+  let bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + (addr ? addr.port : port);
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening(port) {
+  let addr = this.address();
+  let bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + (addr ? addr.port : port);
+  console.log('Listening on ', bind);
+  console.log('App working in:', app.get('env'));
+}

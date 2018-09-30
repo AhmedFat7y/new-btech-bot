@@ -1,0 +1,42 @@
+block config
+doctype html
+html.no-js
+  head
+    meta(charset='utf-8')
+    title Web application with Metronic
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no')
+    link(rel='stylesheet', href='/styles/vendor.css')
+    link(rel='stylesheet', href='/styles/metronic.css')
+    link(rel='stylesheet', href='/styles/main.css')
+    link(rel='stylesheet', href='/styles/style.css')
+    link(rel='stylesheet', href='/styles/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min')
+    script(src='/scripts/lib/modernizr/modernizr.js')
+  body.page-header-fixed.page-sidebar-closed-hide-logo.page-container-bg-solid
+    //if lt IE 10
+      p.browsehappy
+        | You are using an
+        strong outdated
+        |  browser. Please
+        a(href='http://browsehappy.com/', upgrade='', your='', browser='', to='', improve='', experience.<='', p='')
+    include _header
+    // BEGIN HEADER & CONTENT DIVIDER
+    .clearfix
+    // END HEADER & CONTENT DIVIDER
+    // BEGIN CONTAINER
+    .page-container
+      if page !== 'login'
+        include _sidebar
+      // BEGIN CONTENT
+      .page-content-wrapper
+        // BEGIN CONTENT BODY
+        .page-content
+          block content
+    // BEGIN FOOTER
+    include _footer
+    block scripts
+      script.
+        var filters = !{JSON.stringify(filters || {})};
+        var pagesCount = !{pagesCount || 1};
+      script(src='/scripts/config.js')
+      script(src='/scripts/common.js')

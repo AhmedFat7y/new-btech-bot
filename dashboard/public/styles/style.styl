@@ -1,0 +1,323 @@
+*
+  box-sizing: inherit
+
+html.hidden
+  display block!important
+a
+  text-decoration: none
+  display: inline-block
+
+body
+  box-sizing: border-box
+
+ul li
+    list-style-type: none
+
+.vertical-center
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+
+.groups-tab,.profiles-tab
+  display: block
+
+.dashboard-stat.dashboard-stat-v2.blue:active,
+.dashboard-stat.dashboard-stat-v2.blue:hover,
+.dashboard-stat.dashboard-stat-v2.red-pink:hover,
+.dashboard-stat.dashboard-stat-v2.red-pink:active
+  box-shadow: 5px 5px 5px #888888
+
+.group.dashboard-stat.dashboard-stat-v2.red-pink,.profile.dashboard-stat.dashboard-stat-v2.blue
+  box-shadow:5px 5px 5px #888888
+
+#make-group
+  display: none
+  // padding-top: 52px
+
+.submit-filters
+  padding-top: 35px
+  button + button {
+    margin-left: 20px
+  }
+
+#create-group
+  padding-top: 96.5px
+
+.alert.alert-danger
+  height: auto
+  font-size: 10px
+  margin-top: 12px
+  display:none
+
+.row .profile-image
+
+  img
+    width:200px
+
+.list-item-content-userCount
+  text-align:center
+
+.convo-details
+  overflow-y: auto
+  height: 299px
+  width: 100%
+  overflow-y: auto
+  max-height: 300px
+
+.grid
+  display: flex
+  .column
+    padding: 0 10px
+    display: inline-block
+    &--1
+      width: 10%
+    &--2
+      width: 20%
+    &--3
+      width: 30%
+    &--4
+      width: 40%
+    &--5
+      width: 50%
+    &--6
+      width: 60%
+    &--7
+      width: 70%
+    &--8
+      width: 80%
+    &--9
+      width: 90%
+    &--10
+      width: 100%
+
+.convos-list
+  padding: 0
+  margin: 0
+  border: 1px solid #000
+
+.convo-wrapper
+  display: block
+  + .convo-wrapper
+    border-top: 1px solid #000
+
+.convo
+  display: flex
+  flex-flow: row nowrap
+  padding: 20px 10px
+  width: 100%
+  .active &, &:hover, &:active {
+    background-color: rgba(0, 0, 0, .10)
+  }
+  &__img-wrapper
+    max-width: 50px
+    img
+      width: 100px
+      height: 50px
+      max-width: 100%
+      border-radius: 50%
+      background: green
+      vertical-align: top
+
+  &__content-wrapper
+    margin-left: 20px
+    display: flex
+    flex-flow: column nowrap
+    padding: 5px 0
+    justify-content: space-between
+    span
+      color: #000
+
+.convo-details
+  height: 100%
+  &.empty
+    display: flex
+    justify-content: center
+    align-items: center
+
+.convo-details
+  display: block
+
+.message + .message
+  margin-top: 5px
+
+.message span
+  max-width: 75%
+  display: inline-block
+  padding: 10px
+
+.message--from span
+  text-align: left
+  float: left
+  background-color: #f1f0f0
+  border-radius: 0 20px 20px 0
+
+.message--to span
+  text-align: right
+  float: right
+  background-color: #0084ff
+  color: #fff
+  border-radius: 20px 0 0 20px
+
+.message:after
+  content: " "
+  display: table
+  clear: both
+
+.message.error span
+  background-color: #fa3c4c
+
+.loader,
+.loader:after
+  border-radius 50%
+  width 10em
+  height 10em
+
+.loader
+  margin 60px auto
+  font-size 10px
+  position relative
+  text-indent -9999em
+  border-top 1.1em solid rgba(238, 37, 92, 0.2)
+  border-right 1.1em solid rgba(238, 37, 92, 0.2)
+  border-bottom 1.1em solid rgba(238, 37, 92, 0.2)
+  border-left 1.1em solid #ee255c
+  -webkit-transform translateZ(0)
+  -ms-transform translateZ(0)
+  transform translateZ(0)
+  -webkit-animation load8 1.1s infinite linear
+  animation load8 1.1s infinite linear
+
+@-webkit-keyframes load8
+  0%
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+@keyframes load8
+  0%
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+.requests-list
+  list-style none
+
+.request
+  span
+    margin-right 10px
+    color #5476af
+  &__content-wrapper
+    display flex
+    flex-flow row wrap
+    justify-content space-between
+
+.mt-element-list .list-simple.mt-list-container ul>.mt-list-item>.list-item-content
+  padding-left 42px
+
+.mt-list-container
+  counter-reset section                     /* Set a counter named 'section', and it`s initial value is 0. */
+
+.mt-list-container .list-icon-container
+  counter-increment section                 /* Increment the value of section counter by 1 */
+
+.mt-list-item .list-icon-container::before
+  content counter(section)                  /* Display the value of section counter */
+
+table.center
+  th, td
+    text-align center
+
+.daterangepicker.dropdown-menu
+  z-index 9996
+
+.page-logo
+  img
+    max-width 100%
+
+.page-top
+  text-align: center
+  .data-range
+    display: block
+    margin: 0
+    text-align: right
+
+
+.page-content
+  .row + .row
+    margin-top: 20px
+
+.user-info
+  .title
+    font-weight: bold
+    + .content
+      margin-left: 10px
+
+.page-header.navbar .page-logo 
+  padding: 0
+  > a
+    float: none
+    border-right: 2px solid gray
+    max-width: 100%
+    max-height: 100%
+    background-color: #fff
+    text-align: center
+  .logo-default
+    max-height: 68px
+    margin: 0
+
+.global-daterange > .row
+  display: flex
+  align-items: center
+
+.global-switch
+  text-align: center
+  .global-switch-btn
+    background-color: #C63702
+    background-image: linear-gradient(167deg, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0) 55%), linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0))
+    border-radius: 6px
+    box-shadow: 0 0 0 1px #C63702 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #AD3002, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5)
+    color: #FFF
+    display: inline-block
+    font-family: "Lucida Grande", Arial, sans-serif
+    font-size: 22px
+    font-weight: bold
+    height: 61px
+    letter-spacing: -1px
+    line-height: 61px
+    margin: 30px 0 10px
+    position: relative
+    text-align: center
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5)
+    text-decoration: none !important
+    top: 0
+    width: auto
+    -moz-transition: 0.15s
+    -o-transition: 0.15s
+    -webkit-transition: 0.15s
+    transition: 0.15s
+
+    &:hover, &:focus
+      background-color: #D13902
+      box-shadow: 0 0 0 1px #C63702 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #AD3002, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6)
+      top: -2px
+
+    &:active, &.active
+      box-shadow: 0 0 0 1px #AD3002 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+      -moz-transform: translateY(10px)
+      -ms-transform: translateY(10px)
+      -webkit-transform: translateY(10px)
+      transform: translateY(10px)
+    &.active
+      background-color: green
+      background-color: green
+      box-shadow: 0 0 0 1px green inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+    &.loading
+      background-color: gray
+      background-color: gray
+      box-shadow: 0 0 0 1px gray inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
